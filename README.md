@@ -31,7 +31,7 @@ You enter your organization profile and security metrics; the tool outputs **Tot
 | **Industry** | Your sector. Used to set the estimated cost per breach (SLE × ARO) for your industry. Options: Healthcare, Financial, Industrial, Technology. |
 | **Number of Developers** | Size of your development team. Drives productivity savings (more developers → more hours recovered). |
 | **Average Developer Salary ($)** | Typical annual salary per developer. Used to turn “hours saved” into dollar value. |
-| **Total Annual Application Security Spend ($)** | What you spend per year on app security (e.g. Sonar, pentesting, bug bounties). Used to compute the value multiplier. |
+| **Annual SonarQube License Cost ($)** | Your annual cost for SonarQube licenses. Used to compute the value multiplier. |
 | **Critical & High Vulnerabilities Addressed (Last Year)** | Count of critical and high-severity issues you fixed in the last 12 months. Feeds into the RoM (risk mitigation) value. |
 
 ---
@@ -74,8 +74,8 @@ The risk part uses a **Return on Mitigation** idea similar to HackerOne’s, adj
 ### 3. Total Value and Multiplier
 
 - **Total Value Generated** = Productivity Gain (ROI) + Risk Mitigation (RoM).
-- **Your Combined Multiplier** = (Total Value − Total Annual Application Security Spend) ÷ Total Annual Application Security Spend.  
-  So it answers: *“For every $1 spent on app security, how much value do we get (net)?”*
+- **Your Combined Multiplier** = (Total Value − Annual SonarQube License Cost) ÷ Annual SonarQube License Cost.
+  So it answers: *"For every $1 spent on SonarQube, how much value do we get (net)?"*
 
 ---
 

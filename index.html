@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ROMI - Sonar Unified Value Calculator (ROI + ROM)</title>
+    <title>Sonar - Extended ROI Calculator</title>
     <link rel="stylesheet" href="calculator.css">
 </head>
 <body>
 
 <div class="container">
-    <h1>Total Code Value Calculator (ROI + RoM)</h1>
+    <h1>Sonar - Extended ROI Calculator</h1>
 
     <div class="input-section">
         <h3>1. Organization Profile</h3>
@@ -31,9 +31,9 @@
 
         <h3>2. Security & Risk</h3>
 
-        <label for="securitySpend">Total Annual Application Security Spend ($)</label>
+        <label for="securitySpend">Annual SonarQube License Cost ($)</label>
         <input type="number" id="securitySpend" value="150000">
-        <span class="tooltip">Includes tools (Sonar), pentesting, bug bounties, etc.</span>
+        <span class="tooltip">Your annual cost for SonarQube licenses.</span>
 
         <label for="vulnsFixed">Critical & High Vulnerabilities Addressed (Last Year)</label>
         <input type="number" id="vulnsFixed" value="45">
@@ -126,8 +126,8 @@
         <h3>3. Total Value and Multiplier</h3>
         <ul>
             <li><strong>Total Value Generated</strong> = Productivity Gain (ROI) + Risk Mitigation (RoM).</li>
-            <li><strong>Your Combined Multiplier</strong> = (Total Value − Total Annual Application Security Spend) ÷ Total Annual Application Security Spend.<br>
-            So it answers: <em>"For every $1 spent on app security, how much value do we get (net)?"</em></li>
+            <li><strong>Your Combined Multiplier</strong> = (Total Value − Annual SonarQube License Cost) ÷ Annual SonarQube License Cost.<br>
+            So it answers: <em>"For every $1 spent on SonarQube, how much value do we get (net)?"</em></li>
         </ul>
     </div>
 </div>
