@@ -114,3 +114,83 @@ input:focus, select:focus {
     margin-bottom: 15px;
     display: block;
 }
+
+/* Information section below calculator */
+.info-section {
+    background-color: var(--card);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    max-width: 900px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.info-content {
+    line-height: 1.7;
+}
+
+.info-intro {
+    background-color: #35364A;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border-left: 4px solid var(--accent);
+}
+
+.info-intro p {
+    margin: 0;
+    font-size: 16px;
+}
+
+.info-section h2 {
+    color: var(--accent);
+    font-size: 24px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 10px;
+}
+
+.info-section h3 {
+    color: #E0E0E0;
+    font-size: 18px;
+    margin-top: 25px;
+    margin-bottom: 12px;
+}
+
+.info-section p {
+    margin-bottom: 15px;
+    color: #C0C0C0;
+}
+
+.info-section ul {
+    margin-bottom: 15px;
+    padding-left: 25px;
+    color: #C0C0C0;
+}
+
+.info-section ol {
+    margin-bottom: 15px;
+    padding-left: 25px;
+    color: #C0C0C0;
+}
+
+.info-section li {
+    margin-bottom: 10px;
+}
+
+.info-section li ul {
+    margin-top: 8px;
+}
+
+.formula-note {
+    font-size: 14px;
+    color: #888;
+    font-style: italic;
+}
+
+body {
+    flex-direction: column;
+    align-items: center;
+}

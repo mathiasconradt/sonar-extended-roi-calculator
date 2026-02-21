@@ -70,6 +70,68 @@
     </div>
 </div>
 
+<div class="info-section">
+    <div class="info-content">
+        <div class="info-intro">
+            <p>A <strong>Total Code Value Calculator</strong> that combines <strong>Return on Investment (ROI)</strong> from developer productivity with <strong>Return on Mitigation (RoM)</strong> from security risk reduction. It helps you quantify the business value of using Sonar (and related application security practices) in terms of time saved and breach costs avoided.</p>
+        </div>
+
+        <h2>What It Does</h2>
+        <p>The calculator produces <strong>two kinds of value</strong> and adds them into a single number:</p>
+        <ol>
+            <li><strong>Productivity Gain (ROI)</strong> — Time and cost savings from developers spending less time on maintenance and fixing code issues (based on Sonar's productivity model).</li>
+            <li><strong>Risk Mitigation (RoM)</strong> — Estimated cost avoidance from addressing security vulnerabilities before they can be exploited (based on an adapted HackerOne Return on Mitigation approach, tailored for a SAST vendor like Sonar).</li>
+        </ol>
+        <p>You enter your organization profile and security metrics; the tool outputs <strong>Total Value Generated</strong> and a <strong>Combined Multiplier</strong> (value generated per dollar spent on application security).</p>
+
+        <h2>How the Numbers Are Calculated</h2>
+
+        <h3>1. Productivity Gain (ROI) — Sonar model</h3>
+        <p>The productivity part is based on Sonar's calculation model for reclaimed developer productivity. The model uses market research and customer testimonials to give a <strong>conservative estimate</strong> of the efficiency gain your team can achieve after deploying SonarQube for automated code review.</p>
+
+        <p><strong>Base assumptions:</strong></p>
+        <ul>
+            <li><strong>Hours worked per week:</strong> 40 hours per developer</li>
+            <li><strong>Weeks worked per year:</strong> 46 weeks</li>
+            <li><strong>Portion of work week spent maintaining code:</strong> 40% (16 hours/week)</li>
+            <li><strong>Estimated productivity gain with SonarQube:</strong> 25% of that maintenance time → <strong>4 hours per week</strong> reclaimed per developer</li>
+        </ul>
+
+        <p><strong>Formula:</strong><br>
+        <strong>Productivity savings</strong> = Number of developers × 4 × 46 × (Average salary ÷ 2,080)<br>
+        <span class="formula-note">(2,080 = standard work hours per year: 40 h/week × 52 weeks.)</span></p>
+
+        <p>So you get an <strong>annual dollar value of time recovered</strong> by your team thanks to better code quality and less rework.</p>
+
+        <h3>2. Risk Mitigation (RoM) — Adapted from HackerOne</h3>
+        <p>The risk part uses a <strong>Return on Mitigation</strong> idea similar to HackerOne's, adjusted for a <strong>SAST vendor</strong> (cost avoidance and risk reduction, not "damage from a single breach" only):</p>
+
+        <ul>
+            <li><strong>Core idea:</strong><br>
+            <strong>Mitigated losses</strong> ≈ (SLE × ARO) × Vulnerabilities addressed
+                <ul>
+                    <li><strong>SLE</strong> = Single Loss Expectancy (estimated cost of one breach).</li>
+                    <li><strong>ARO</strong> = Annual Rate of Occurrence (how often such a breach might occur).</li>
+                </ul>
+            </li>
+            <li><strong>In this calculator:</strong><br>
+            The <strong>(SLE × ARO)</strong> part is represented by an <strong>industry-based value per vulnerability</strong> (the number tied to each Industry option). So:<br>
+            <strong>Risk savings</strong> = Vulnerabilities addressed × Industry risk per vuln × <strong>Exploitability factor</strong>.
+            </li>
+            <li><strong>Exploitability factor (0.2):</strong><br>
+            To reflect that not every static finding is exploitable in production, we use a <strong>0.2 (20%)</strong> factor. This is based on industry benchmarks and reachability studies (e.g. Java CVE benchmarks) suggesting roughly 20% of SAST findings are both valid and reachable by an attacker. So the RoM number is "realistic business risk," not raw finding count.
+            </li>
+        </ul>
+
+        <h3>3. Total Value and Multiplier</h3>
+        <ul>
+            <li><strong>Total Value Generated</strong> = Productivity Gain (ROI) + Risk Mitigation (RoM).</li>
+            <li><strong>Your Combined Multiplier</strong> = (Total Value − Total Annual Application Security Spend) ÷ Total Annual Application Security Spend.<br>
+            So it answers: <em>"For every $1 spent on app security, how much value do we get (net)?"</em></li>
+        </ul>
+    </div>
+</div>
+
 <script src="calculator.js"></script>
 
 </body>
