@@ -108,3 +108,9 @@ The risk part uses a **Return on Mitigation** idea similar to HackerOne’s, adj
 - **RoM part:** Values **security risk reduced** (industry-based cost per vuln × vulnerabilities addressed × 20% exploitability factor).
 
 Together they give a **Total Code Value** and a **Combined Multiplier** so you can explain and compare the value of your investment in code quality and application security (including Sonar).
+
+---
+
+## Disclaimer
+
+Neither Sonar nor Mathias Conradt does guarantee or predict that you will achieve a specific result from using our products, services or the information provided through this Return on Investment calculator. You acknowledge and understand that results may vary for each customer, depending on individual circumstances. By using our products, services and or this Return on Investment calculator, you fully agree that there are no guarantees regarding the outcome or results you may experience as a consequence of your use.
