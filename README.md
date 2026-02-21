@@ -17,7 +17,7 @@ You enter your organization profile and security metrics; the tool outputs **Tot
 
 ## How to Use
 
-1. Open **`calculator.html`** in a browser (no server required).
+1. Use the calculator online at **[https://conradt.net/sonar-extended-roi-calculator/](https://conradt.net/sonar-extended-roi-calculator/)**, or open **`index.html`** locally in a browser (no server required).
 2. Fill in the inputs under **Organization Profile** and **Security & Risk**.
 3. Click **Calculate Total Value**.
 4. Read **Productivity Gain**, **Risk Mitigation**, **Total Value Generated**, and **Your Combined Multiplier**.
@@ -96,7 +96,7 @@ The risk part uses a **Return on Mitigation** idea similar to HackerOne’s, adj
 
 | File | Purpose |
 |------|--------|
-| `calculator.html` | Main UI: inputs and results. |
+| `index.html` | Main UI: inputs and results. |
 | `calculator.js`   | All formulas: ROI, RoM, total value, multiplier. |
 | `calculator.css`  | Styling for the calculator page. |
 
