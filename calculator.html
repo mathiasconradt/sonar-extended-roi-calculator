@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROMI - Sonar Unified Value Calculator (ROI + ROM)</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Total Code Value Calculator (ROI + RoM)</h1>
+
+    <div class="input-section">
+        <h3>1. Organization Profile</h3>
+        
+        <label for="industry">Industry</label>
+        <select id="industry">
+            <option value="37300">Healthcare</option>
+            <option value="27700">Financial</option>
+            <option value="43800">Industrial</option>
+            <option value="77600">Technology</option>
+        </select>
+        <span class="tooltip">Determines the estimated cost per breach (SLE) based on industry standards.</span>
+
+        <label for="numDevs">Number of Developers</label>
+        <input type="number" id="numDevs" value="75" min="1">
+
+        <label for="avgSalary">Average Developer Salary ($)</label>
+        <input type="number" id="avgSalary" value="120000" step="1000">
+
+        <h3>2. Security & Risk</h3>
+
+        <label for="securitySpend">Total Annual Application Security Spend ($)</label>
+        <input type="number" id="securitySpend" value="150000">
+        <span class="tooltip">Includes tools (Sonar), pentesting, bug bounties, etc.</span>
+
+        <label for="vulnsFixed">Critical & High Vulnerabilities Addressed (Last Year)</label>
+        <input type="number" id="vulnsFixed" value="45">
+        <span class="tooltip">Issues fixed before they could be exploited.</span>
+
+        <button class="btn" onclick="calculateValue()">Calculate Total Value</button>
+    </div>
+
+    <div class="results-panel">
+        
+        <div class="metric-group">
+            <div class="metric-label">Productivity Gain (ROI)</div>
+            <div class="metric-value" id="resProductivity">$0</div>
+            <div class="metric-sub">Based on 10% time recovered from maintenance toil.</div>
+        </div>
+
+        <div class="metric-group">
+            <div class="metric-label">Risk Mitigation (RoM)</div>
+            <div class="metric-value" id="resRisk">$0</div>
+            <div class="metric-sub">Avoided breach costs from fixed vulnerabilities.</div>
+        </div>
+
+        <div class="metric-group">
+            <div class="metric-label">Total Value Generated</div>
+            <div class="metric-value" id="resTotal">$0</div>
+        </div>
+
+        <div class="metric-group">
+            <div class="metric-label">Your Combined Multiplier</div>
+            <div class="metric-value total-rom" id="resMultiplier">0.0x</div>
+            <div class="metric-sub">For every $1 spent, you generate this much value.</div>
+        </div>
+
+    </div>
+</div>
+
+<script src="calculator.js"></script>
+
+</body>
+</html>
